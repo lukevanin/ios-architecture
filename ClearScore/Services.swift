@@ -25,6 +25,10 @@ protocol WebService {
 
 final class JSONWebService: WebService {
     struct Config {
+        static let `default` = Config(
+            cachePolicy: .useProtocolCachePolicy,
+            timeoutInterval: 30
+        )
         let cachePolicy: NSURLRequest.CachePolicy
         let timeoutInterval: TimeInterval
     }

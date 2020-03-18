@@ -25,12 +25,11 @@ extension RepositoryError {
 
         case .content(let error):
             self.kind = .incompatible
-            self.underlyingError = error
 
         case .connection(let error):
             self.kind = .unavailable
-            self.underlyingError = error
         }
+        self.underlyingError = serviceError
     }
 }
 
@@ -46,7 +45,7 @@ final class WebCreditRepository: CreditRepository {
     private let baseURL: URL
     private let config: JSONWebService.Config
     private let service: JSONWebService
-    init(baseURL: URL, config: JSONWebService.Config, service: HTTPService) {
+    init(baseURL: URL, config: JSONWebService.Config = .default, service: HTTPService) {
         self.baseURL = baseURL
         self.config = config
         self.service = JSONWebService(

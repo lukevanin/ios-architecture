@@ -9,6 +9,10 @@
 import XCTest
 @testable import ClearScore
 
+private enum TestError: Error, Equatable {
+    case zombies
+}
+
 private func makeTestData(from entity: CreditResponseDTO) -> Data {
     let json = """
         {
@@ -54,8 +58,8 @@ final class CreditRepositoryTests: XCTestCase {
         wait(for: [e], timeout: 1.0)
     }
     
-    func testGetCreditResponseError() {
-        let httpError = HTTPError(code: 400)
+    func testGetCreditResponseConnectionHTTPError() {
+        let httpError = HTTPError(code: 404)
         let httpService = MockHTTPService() { request in
             return .failure(.http(httpError))
         }
@@ -71,10 +75,10 @@ final class CreditRepositoryTests: XCTestCase {
 
             case .failure(let error):
                 XCTAssertEqual(error.kind, .unavailable)
-                if let underlyingError = error.underlyingError as? ConnectionError {
+                if let underlyingError = error.underlyingError as? ServiceError {
                     switch underlyingError {
                     
-                    case .http(let error):
+                    case .connection(.http(let error)):
                         XCTAssertEqual(error, httpError)
                         
                     default:
@@ -90,13 +94,80 @@ final class CreditRepositoryTests: XCTestCase {
         wait(for: [e], timeout: 1.0)
     }
     
+    func testGetCreditResponseConnectionApplicationError() {
+        let httpService = MockHTTPService() { request in
+            return .failure(.application(TestError.zombies))
+        }
+        let repository = makeCreditRepository(
+            httpService: httpService
+        )
+        let e = expectation(description: "web-service-response")
+        repository.getCreditScore { result in
+            switch result {
+                
+            case .success(_):
+                XCTFail("Unexpected success response")
+                
+            case .failure(let error):
+                XCTAssertEqual(error.kind, .unavailable)
+                if let underlyingError = error.underlyingError as? ServiceError {
+                    switch underlyingError {
+                        
+                    case .connection(.application(let error as TestError)):
+                        XCTAssertEqual(error, TestError.zombies)
+                        
+                    default:
+                        XCTFail("Expected application connection error")
+                    }
+                }
+                else {
+                    XCTFail("Expected underlying ServiceError")
+                }
+            }
+            e.fulfill()
+        }
+        wait(for: [e], timeout: 1.0)
+    }
+    
+    func testGetCreditResponseContentError() {
+        let httpService = MockHTTPService() { request in
+            let data = "0xBAADF00D".data(using: .utf8)!
+            return .success(data)
+        }
+        let repository = makeCreditRepository(
+            httpService: httpService
+        )
+        let e = expectation(description: "web-service-response")
+        repository.getCreditScore { result in
+            switch result {
+                
+            case .success(_):
+                XCTFail("Unexpected success response")
+                
+            case .failure(let error):
+                XCTAssertEqual(error.kind, .incompatible)
+                if let underlyingError = error.underlyingError as? ServiceError {
+                    switch underlyingError {
+                        
+                    case .content(_):
+                        break
+                        
+                    default:
+                        XCTFail("Expected application content error")
+                    }
+                }
+                else {
+                    XCTFail("Expected underlying ServiceError")
+                }
+            }
+            e.fulfill()
+        }
+        wait(for: [e], timeout: 1.0)
+    }
+    
     private func makeCreditRepository(httpService: HTTPService) -> WebCreditRepository {
         return WebCreditRepository(
             baseURL: URL(string: "http://example.org/")!,
-            config: JSONWebService.Config(
-                cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
-                timeoutInterval: 5
-            ),
             service: httpService
         )
     }
