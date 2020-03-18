@@ -13,6 +13,8 @@
 		FC911C792422577000E0BBE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC911C772422577000E0BBE0 /* LaunchScreen.storyboard */; };
 		FC911C842422577100E0BBE0 /* ClearScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C832422577100E0BBE0 /* ClearScoreTests.swift */; };
 		FC911C8F2422577100E0BBE0 /* ClearScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C8E2422577100E0BBE0 /* ClearScoreUITests.swift */; };
+		FC911C9E242258CF00E0BBE0 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C9D242258CF00E0BBE0 /* Entities.swift */; };
+		FC911CA0242259B800E0BBE0 /* EntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C9F242259B800E0BBE0 /* EntityTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		FC911C8E2422577100E0BBE0 /* ClearScoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreUITests.swift; sourceTree = "<group>"; };
 		FC911C902422577100E0BBE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC911C9C2422578100E0BBE0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FC911C9D242258CF00E0BBE0 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		FC911C9F242259B800E0BBE0 /* EntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				FC911C6E2422576F00E0BBE0 /* AppDelegate.swift */,
 				FC911C702422576F00E0BBE0 /* ViewController.swift */,
+				FC911C9D242258CF00E0BBE0 /* Entities.swift */,
 				FC911C752422577000E0BBE0 /* Assets.xcassets */,
 				FC911C772422577000E0BBE0 /* LaunchScreen.storyboard */,
 				FC911C7A2422577000E0BBE0 /* Info.plist */,
@@ -109,8 +114,9 @@
 		FC911C822422577100E0BBE0 /* ClearScoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				FC911C832422577100E0BBE0 /* ClearScoreTests.swift */,
 				FC911C852422577100E0BBE0 /* Info.plist */,
+				FC911C832422577100E0BBE0 /* ClearScoreTests.swift */,
+				FC911C9F242259B800E0BBE0 /* EntityTests.swift */,
 			);
 			path = ClearScoreTests;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC911C9E242258CF00E0BBE0 /* Entities.swift in Sources */,
 				FC911C712422576F00E0BBE0 /* ViewController.swift in Sources */,
 				FC911C6F2422576F00E0BBE0 /* AppDelegate.swift in Sources */,
 			);
@@ -263,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC911CA0242259B800E0BBE0 /* EntityTests.swift in Sources */,
 				FC911C842422577100E0BBE0 /* ClearScoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
