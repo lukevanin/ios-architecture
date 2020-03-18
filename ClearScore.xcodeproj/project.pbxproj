@@ -47,6 +47,7 @@
 		FC911C8A2422577100E0BBE0 /* ClearScoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearScoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC911C8E2422577100E0BBE0 /* ClearScoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreUITests.swift; sourceTree = "<group>"; };
 		FC911C902422577100E0BBE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC911C9C2422578100E0BBE0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		FC911C622422576F00E0BBE0 = {
 			isa = PBXGroup;
 			children = (
+				FC911C9C2422578100E0BBE0 /* README.md */,
 				FC911C6D2422576F00E0BBE0 /* ClearScore */,
 				FC911C822422577100E0BBE0 /* ClearScoreTests */,
 				FC911C8D2422577100E0BBE0 /* ClearScoreUITests */,
