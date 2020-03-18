@@ -55,13 +55,13 @@ final class EntityTests: XCTestCase {
 
     func testDecodeJSON() throws {
         let json = """
-        {
-            "creditReportInfo": {
-                "score": 314,
-                "maxScoreValue": 345,
-                "minScoreValue": 178
+            {
+                "creditReportInfo": {
+                    "score": 314,
+                    "maxScoreValue": 345,
+                    "minScoreValue": 178
+                }
             }
-        }
         """
         let data = json.data(using: .utf8)!
         let result = try JSONDecoder().decode(CreditResponseDTO.self, from: data)

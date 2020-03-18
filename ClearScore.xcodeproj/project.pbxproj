@@ -15,6 +15,12 @@
 		FC911C8F2422577100E0BBE0 /* ClearScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C8E2422577100E0BBE0 /* ClearScoreUITests.swift */; };
 		FC911C9E242258CF00E0BBE0 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C9D242258CF00E0BBE0 /* Entities.swift */; };
 		FC911CA0242259B800E0BBE0 /* EntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C9F242259B800E0BBE0 /* EntityTests.swift */; };
+		FC911CA224225F1300E0BBE0 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CA124225F1300E0BBE0 /* Repositories.swift */; };
+		FC911CA42422603A00E0BBE0 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CA32422603A00E0BBE0 /* Services.swift */; };
+		FC911CA62422654000E0BBE0 /* HTTPServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CA52422654000E0BBE0 /* HTTPServiceTests.swift */; };
+		FC911CA82422654D00E0BBE0 /* JSONServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CA72422654D00E0BBE0 /* JSONServiceTests.swift */; };
+		FC911CAA2422655C00E0BBE0 /* CreditRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CA92422655C00E0BBE0 /* CreditRepositoryTests.swift */; };
+		FC911CAC24226A9700E0BBE0 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CAB24226A9700E0BBE0 /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,12 @@
 		FC911C9C2422578100E0BBE0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FC911C9D242258CF00E0BBE0 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		FC911C9F242259B800E0BBE0 /* EntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTests.swift; sourceTree = "<group>"; };
+		FC911CA124225F1300E0BBE0 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		FC911CA32422603A00E0BBE0 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		FC911CA52422654000E0BBE0 /* HTTPServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceTests.swift; sourceTree = "<group>"; };
+		FC911CA72422654D00E0BBE0 /* JSONServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServiceTests.swift; sourceTree = "<group>"; };
+		FC911CA92422655C00E0BBE0 /* CreditRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditRepositoryTests.swift; sourceTree = "<group>"; };
+		FC911CAB24226A9700E0BBE0 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +115,9 @@
 			children = (
 				FC911C6E2422576F00E0BBE0 /* AppDelegate.swift */,
 				FC911C702422576F00E0BBE0 /* ViewController.swift */,
+				FC911CA124225F1300E0BBE0 /* Repositories.swift */,
 				FC911C9D242258CF00E0BBE0 /* Entities.swift */,
+				FC911CA32422603A00E0BBE0 /* Services.swift */,
 				FC911C752422577000E0BBE0 /* Assets.xcassets */,
 				FC911C772422577000E0BBE0 /* LaunchScreen.storyboard */,
 				FC911C7A2422577000E0BBE0 /* Info.plist */,
@@ -117,6 +131,10 @@
 				FC911C852422577100E0BBE0 /* Info.plist */,
 				FC911C832422577100E0BBE0 /* ClearScoreTests.swift */,
 				FC911C9F242259B800E0BBE0 /* EntityTests.swift */,
+				FC911CA92422655C00E0BBE0 /* CreditRepositoryTests.swift */,
+				FC911CA72422654D00E0BBE0 /* JSONServiceTests.swift */,
+				FC911CA52422654000E0BBE0 /* HTTPServiceTests.swift */,
+				FC911CAB24226A9700E0BBE0 /* Mocks.swift */,
 			);
 			path = ClearScoreTests;
 			sourceTree = "<group>";
@@ -260,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC911CA42422603A00E0BBE0 /* Services.swift in Sources */,
 				FC911C9E242258CF00E0BBE0 /* Entities.swift in Sources */,
+				FC911CA224225F1300E0BBE0 /* Repositories.swift in Sources */,
 				FC911C712422576F00E0BBE0 /* ViewController.swift in Sources */,
 				FC911C6F2422576F00E0BBE0 /* AppDelegate.swift in Sources */,
 			);
@@ -271,7 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC911CA0242259B800E0BBE0 /* EntityTests.swift in Sources */,
+				FC911CAA2422655C00E0BBE0 /* CreditRepositoryTests.swift in Sources */,
 				FC911C842422577100E0BBE0 /* ClearScoreTests.swift in Sources */,
+				FC911CA62422654000E0BBE0 /* HTTPServiceTests.swift in Sources */,
+				FC911CA82422654D00E0BBE0 /* JSONServiceTests.swift in Sources */,
+				FC911CAC24226A9700E0BBE0 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
