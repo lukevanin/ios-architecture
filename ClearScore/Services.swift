@@ -9,7 +9,7 @@
 import Foundation
 
 
-// MARK: JSON
+// MARK: - Abstract Web Service
 
 
 enum ServiceError: Error {
@@ -21,6 +21,10 @@ enum ServiceError: Error {
 protocol WebService {
     func get<T>(url: URL, completion: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable
 }
+
+
+
+// MARK: JSON Web Service
 
 
 final class JSONWebService: WebService {
@@ -65,7 +69,7 @@ final class JSONWebService: WebService {
 }
 
 
-// MARK: - Data
+// MARK: - HTTP web service
 
 
 struct HTTPError: Error, Equatable {
