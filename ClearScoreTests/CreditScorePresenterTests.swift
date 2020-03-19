@@ -40,6 +40,7 @@ final class CreditScorePresenterTests: XCTestCase {
                 e.fulfill()
             }
         )
+        presenter.refreshCreditScore()
         wait(for: [e], timeout: 1.0)
     }
     
@@ -59,6 +60,7 @@ final class CreditScorePresenterTests: XCTestCase {
             wireframe: wireframe,
             observer: nil
         )
+        presenter.refreshCreditScore()
         wait(for: [e], timeout: 1.0)
     }
     
@@ -78,6 +80,7 @@ final class CreditScorePresenterTests: XCTestCase {
             wireframe: wireframe,
             observer: nil
         )
+        presenter.refreshCreditScore()
         wait(for: [e], timeout: 1.0)
     }
     
@@ -97,6 +100,7 @@ final class CreditScorePresenterTests: XCTestCase {
             wireframe: wireframe,
             observer: nil
         )
+        presenter.refreshCreditScore()
         wait(for: [e], timeout: 1.0)
     }
 }

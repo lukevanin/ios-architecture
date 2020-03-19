@@ -60,7 +60,6 @@ final class CreditScorePresenterImplementation: CreditScorePresenter {
                 self.present(error: error)
             }
         }
-        refreshCreditScore()
     }
     
     private func present(score: CreditScore) {

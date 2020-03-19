@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FC911C6F2422576F00E0BBE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C6E2422576F00E0BBE0 /* AppDelegate.swift */; };
-		FC911C712422576F00E0BBE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C702422576F00E0BBE0 /* ViewController.swift */; };
 		FC911C762422577000E0BBE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC911C752422577000E0BBE0 /* Assets.xcassets */; };
 		FC911C792422577000E0BBE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC911C772422577000E0BBE0 /* LaunchScreen.storyboard */; };
 		FC911C842422577100E0BBE0 /* ClearScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911C832422577100E0BBE0 /* ClearScoreTests.swift */; };
@@ -24,9 +23,14 @@
 		FC911CB2242389CD00E0BBE0 /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB1242389CD00E0BBE0 /* Interactors.swift */; };
 		FC911CB42423931800E0BBE0 /* CreditInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB32423931800E0BBE0 /* CreditInteractorTests.swift */; };
 		FC911CB62423A1AA00E0BBE0 /* Presenters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB52423A1AA00E0BBE0 /* Presenters.swift */; };
-		FC911CB82423A1CE00E0BBE0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB72423A1CE00E0BBE0 /* Views.swift */; };
+		FC911CB82423A1CE00E0BBE0 /* CreditScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB72423A1CE00E0BBE0 /* CreditScoreViewController.swift */; };
 		FC911CBA2423A64700E0BBE0 /* CreditScorePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB92423A64700E0BBE0 /* CreditScorePresenterTests.swift */; };
 		FC911CBC2423AE5800E0BBE0 /* Localisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CBB2423AE5800E0BBE0 /* Localisations.swift */; };
+		FC911CBE2423C3FB00E0BBE0 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CBD2423C3FB00E0BBE0 /* GaugeView.swift */; };
+		FC911CC02423C42200E0BBE0 /* GaugeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CBF2423C42200E0BBE0 /* GaugeTestViewController.swift */; };
+		FC911CC224240E9700E0BBE0 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CC124240E9700E0BBE0 /* Modules.swift */; };
+		FC911CC42424105600E0BBE0 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CC32424105600E0BBE0 /* Endpoints.swift */; };
+		FC911CC62424164300E0BBE0 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CC52424164300E0BBE0 /* UIKitExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +53,6 @@
 /* Begin PBXFileReference section */
 		FC911C6B2422576F00E0BBE0 /* ClearScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC911C6E2422576F00E0BBE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC911C702422576F00E0BBE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC911C752422577000E0BBE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC911C782422577000E0BBE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC911C7A2422577000E0BBE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,9 +74,14 @@
 		FC911CB1242389CD00E0BBE0 /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
 		FC911CB32423931800E0BBE0 /* CreditInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditInteractorTests.swift; sourceTree = "<group>"; };
 		FC911CB52423A1AA00E0BBE0 /* Presenters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenters.swift; sourceTree = "<group>"; };
-		FC911CB72423A1CE00E0BBE0 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		FC911CB72423A1CE00E0BBE0 /* CreditScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewController.swift; sourceTree = "<group>"; };
 		FC911CB92423A64700E0BBE0 /* CreditScorePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScorePresenterTests.swift; sourceTree = "<group>"; };
 		FC911CBB2423AE5800E0BBE0 /* Localisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisations.swift; sourceTree = "<group>"; };
+		FC911CBD2423C3FB00E0BBE0 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		FC911CBF2423C42200E0BBE0 /* GaugeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeTestViewController.swift; sourceTree = "<group>"; };
+		FC911CC124240E9700E0BBE0 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
+		FC911CC32424105600E0BBE0 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		FC911CC52424164300E0BBE0 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,14 +134,18 @@
 			isa = PBXGroup;
 			children = (
 				FC911C6E2422576F00E0BBE0 /* AppDelegate.swift */,
-				FC911C702422576F00E0BBE0 /* ViewController.swift */,
-				FC911CB72423A1CE00E0BBE0 /* Views.swift */,
+				FC911CC124240E9700E0BBE0 /* Modules.swift */,
+				FC911CB72423A1CE00E0BBE0 /* CreditScoreViewController.swift */,
+				FC911CBF2423C42200E0BBE0 /* GaugeTestViewController.swift */,
+				FC911CBD2423C3FB00E0BBE0 /* GaugeView.swift */,
 				FC911CB52423A1AA00E0BBE0 /* Presenters.swift */,
+				FC911CC32424105600E0BBE0 /* Endpoints.swift */,
 				FC911CBB2423AE5800E0BBE0 /* Localisations.swift */,
 				FC911CB1242389CD00E0BBE0 /* Interactors.swift */,
 				FC911CA124225F1300E0BBE0 /* Repositories.swift */,
 				FC911C9D242258CF00E0BBE0 /* Entities.swift */,
 				FC911CA32422603A00E0BBE0 /* Services.swift */,
+				FC911CC52424164300E0BBE0 /* UIKitExtensions.swift */,
 				FC911C752422577000E0BBE0 /* Assets.xcassets */,
 				FC911C772422577000E0BBE0 /* LaunchScreen.storyboard */,
 				FC911C7A2422577000E0BBE0 /* Info.plist */,
@@ -296,14 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC911CC224240E9700E0BBE0 /* Modules.swift in Sources */,
+				FC911CC02423C42200E0BBE0 /* GaugeTestViewController.swift in Sources */,
+				FC911CBE2423C3FB00E0BBE0 /* GaugeView.swift in Sources */,
 				FC911CB2242389CD00E0BBE0 /* Interactors.swift in Sources */,
 				FC911CA42422603A00E0BBE0 /* Services.swift in Sources */,
 				FC911CB62423A1AA00E0BBE0 /* Presenters.swift in Sources */,
 				FC911C9E242258CF00E0BBE0 /* Entities.swift in Sources */,
-				FC911CB82423A1CE00E0BBE0 /* Views.swift in Sources */,
+				FC911CB82423A1CE00E0BBE0 /* CreditScoreViewController.swift in Sources */,
+				FC911CC62424164300E0BBE0 /* UIKitExtensions.swift in Sources */,
 				FC911CBC2423AE5800E0BBE0 /* Localisations.swift in Sources */,
 				FC911CA224225F1300E0BBE0 /* Repositories.swift in Sources */,
-				FC911C712422576F00E0BBE0 /* ViewController.swift in Sources */,
+				FC911CC42424105600E0BBE0 /* Endpoints.swift in Sources */,
 				FC911C6F2422576F00E0BBE0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,3 +19,16 @@ enum LocalisationMessage {
 protocol Localisations {
     subscript(message: LocalisationMessage) -> String { get }
 }
+
+
+final class StaticLocalisationsImplementation: Localisations {
+    private var localisations = [LocalisationMessage : String]()
+    subscript(message: LocalisationMessage) -> String {
+        get {
+            return localisations[message] ?? String(describing: message)
+        }
+        set {
+            localisations[message] = newValue
+        }
+    }
+}
