@@ -23,6 +23,10 @@
 		FC911CAC24226A9700E0BBE0 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CAB24226A9700E0BBE0 /* Mocks.swift */; };
 		FC911CB2242389CD00E0BBE0 /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB1242389CD00E0BBE0 /* Interactors.swift */; };
 		FC911CB42423931800E0BBE0 /* CreditInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB32423931800E0BBE0 /* CreditInteractorTests.swift */; };
+		FC911CB62423A1AA00E0BBE0 /* Presenters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB52423A1AA00E0BBE0 /* Presenters.swift */; };
+		FC911CB82423A1CE00E0BBE0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB72423A1CE00E0BBE0 /* Views.swift */; };
+		FC911CBA2423A64700E0BBE0 /* CreditScorePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CB92423A64700E0BBE0 /* CreditScorePresenterTests.swift */; };
+		FC911CBC2423AE5800E0BBE0 /* Localisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC911CBB2423AE5800E0BBE0 /* Localisations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		FC911CAB24226A9700E0BBE0 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		FC911CB1242389CD00E0BBE0 /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
 		FC911CB32423931800E0BBE0 /* CreditInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditInteractorTests.swift; sourceTree = "<group>"; };
+		FC911CB52423A1AA00E0BBE0 /* Presenters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenters.swift; sourceTree = "<group>"; };
+		FC911CB72423A1CE00E0BBE0 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		FC911CB92423A64700E0BBE0 /* CreditScorePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScorePresenterTests.swift; sourceTree = "<group>"; };
+		FC911CBB2423AE5800E0BBE0 /* Localisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,9 @@
 			children = (
 				FC911C6E2422576F00E0BBE0 /* AppDelegate.swift */,
 				FC911C702422576F00E0BBE0 /* ViewController.swift */,
+				FC911CB72423A1CE00E0BBE0 /* Views.swift */,
+				FC911CB52423A1AA00E0BBE0 /* Presenters.swift */,
+				FC911CBB2423AE5800E0BBE0 /* Localisations.swift */,
 				FC911CB1242389CD00E0BBE0 /* Interactors.swift */,
 				FC911CA124225F1300E0BBE0 /* Repositories.swift */,
 				FC911C9D242258CF00E0BBE0 /* Entities.swift */,
@@ -135,6 +146,7 @@
 			children = (
 				FC911C852422577100E0BBE0 /* Info.plist */,
 				FC911C832422577100E0BBE0 /* ClearScoreTests.swift */,
+				FC911CB92423A64700E0BBE0 /* CreditScorePresenterTests.swift */,
 				FC911CB32423931800E0BBE0 /* CreditInteractorTests.swift */,
 				FC911C9F242259B800E0BBE0 /* EntityTests.swift */,
 				FC911CA92422655C00E0BBE0 /* CreditRepositoryTests.swift */,
@@ -286,7 +298,10 @@
 			files = (
 				FC911CB2242389CD00E0BBE0 /* Interactors.swift in Sources */,
 				FC911CA42422603A00E0BBE0 /* Services.swift in Sources */,
+				FC911CB62423A1AA00E0BBE0 /* Presenters.swift in Sources */,
 				FC911C9E242258CF00E0BBE0 /* Entities.swift in Sources */,
+				FC911CB82423A1CE00E0BBE0 /* Views.swift in Sources */,
+				FC911CBC2423AE5800E0BBE0 /* Localisations.swift in Sources */,
 				FC911CA224225F1300E0BBE0 /* Repositories.swift in Sources */,
 				FC911C712422576F00E0BBE0 /* ViewController.swift in Sources */,
 				FC911C6F2422576F00E0BBE0 /* AppDelegate.swift in Sources */,
@@ -301,6 +316,7 @@
 				FC911CAA2422655C00E0BBE0 /* CreditRepositoryTests.swift in Sources */,
 				FC911C842422577100E0BBE0 /* ClearScoreTests.swift in Sources */,
 				FC911CA62422654000E0BBE0 /* HTTPServiceTests.swift in Sources */,
+				FC911CBA2423A64700E0BBE0 /* CreditScorePresenterTests.swift in Sources */,
 				FC911CA82422654D00E0BBE0 /* JSONServiceTests.swift in Sources */,
 				FC911CB42423931800E0BBE0 /* CreditInteractorTests.swift in Sources */,
 				FC911CAC24226A9700E0BBE0 /* Mocks.swift in Sources */,

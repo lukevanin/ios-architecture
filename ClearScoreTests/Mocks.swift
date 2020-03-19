@@ -10,6 +10,39 @@ import Foundation
 @testable import ClearScore
 
 
+final class MockLocalisations: Localisations {
+    subscript(message: LocalisationMessage) -> String {
+        return String(describing: message)
+    }
+}
+
+
+final class MockCreditScoreWireframe: CreditScoreWireframe {
+    typealias OnErrorMessage = (String) -> Void
+    var onErrorMessage: OnErrorMessage?
+    init(onErrorMessage: OnErrorMessage? = nil) {
+        self.onErrorMessage = onErrorMessage
+    }
+    func showError(message: String) {
+        onErrorMessage?(message)
+    }
+}
+
+
+final class MockCreditInteractor: CreditScoreInteractorInput, CreditScoreInteractorOutput {
+    typealias Handler = (MockCreditInteractor) -> Void
+    var onCreditScore: CreditScoreInteractorOutput.OnCreditScore?
+    var onError: CreditScoreInteractorOutput.OnError?
+    var handler: Handler
+    init(handler: @escaping Handler) {
+        self.handler = handler
+    }
+    func getLatestCreditScore() {
+        handler(self)
+    }
+}
+
+
 final class MockCreditRepository: CreditRepository {
     typealias Handler = () -> CreditRepository.CreditScoreResult
     var handler: Handler

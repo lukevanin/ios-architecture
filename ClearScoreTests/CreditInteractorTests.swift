@@ -97,7 +97,7 @@ final class CreditInteractorTests: XCTestCase {
             repository: repository
         )
         let e = expectation(description: "credit-score")
-        interactor.onError = {
+        interactor.onError = {1
             XCTAssertEqual($0, CreditScoreError.inaccessible)
             e.fulfill()
         }
