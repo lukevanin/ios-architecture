@@ -23,10 +23,10 @@ extension RepositoryError {
     init(from serviceError: ServiceError) {
         switch serviceError {
 
-        case .content(let error):
+        case .content(_):
             self.kind = .incompatible
 
-        case .connection(let error):
+        case .connection(_):
             self.kind = .unavailable
         }
         self.underlyingError = serviceError

@@ -96,8 +96,8 @@ extension HTTPError {
 
 
 enum ConnectionError: Error {
-    case http(HTTPError)
-    case application(Error)
+    case server(HTTPError)
+    case client(Error)
     case undefined
 }
 
@@ -117,10 +117,10 @@ final class ConcreteHTTPService: HTTPService {
             guard let data = data else {
                 var reason: ConnectionError
                 if let error = error {
-                    reason = .application(error)
+                    reason = .client(error)
                 }
                 else if let response = response as? HTTPURLResponse {
-                    reason = .http(HTTPError(code: response.statusCode))
+                    reason = .server(HTTPError(code: response.statusCode))
                 }
                 else {
                     reason = .undefined

@@ -58,10 +58,10 @@ final class CreditRepositoryTests: XCTestCase {
         wait(for: [e], timeout: 1.0)
     }
     
-    func testGetCreditResponseConnectionHTTPError() {
+    func testGetCreditResponseServerError() {
         let httpError = HTTPError(code: 404)
         let httpService = MockHTTPService() { request in
-            return .failure(.http(httpError))
+            return .failure(.server(httpError))
         }
         let repository = makeCreditRepository(
             httpService: httpService
@@ -78,7 +78,7 @@ final class CreditRepositoryTests: XCTestCase {
                 if let underlyingError = error.underlyingError as? ServiceError {
                     switch underlyingError {
                     
-                    case .connection(.http(let error)):
+                    case .connection(.server(let error)):
                         XCTAssertEqual(error, httpError)
                         
                     default:
@@ -96,7 +96,7 @@ final class CreditRepositoryTests: XCTestCase {
     
     func testGetCreditResponseConnectionApplicationError() {
         let httpService = MockHTTPService() { request in
-            return .failure(.application(TestError.zombies))
+            return .failure(.client(TestError.zombies))
         }
         let repository = makeCreditRepository(
             httpService: httpService
@@ -113,7 +113,7 @@ final class CreditRepositoryTests: XCTestCase {
                 if let underlyingError = error.underlyingError as? ServiceError {
                     switch underlyingError {
                         
-                    case .connection(.application(let error as TestError)):
+                    case .connection(.client(let error as TestError)):
                         XCTAssertEqual(error, TestError.zombies)
                         
                     default:
@@ -163,6 +163,29 @@ final class CreditRepositoryTests: XCTestCase {
             e.fulfill()
         }
         wait(for: [e], timeout: 1.0)
+    }
+    
+    func testGetCreditResponseIntegration() {
+        let httpService = ConcreteHTTPService(
+            session: .shared
+        )
+        let repository = WebCreditRepository(
+            baseURL: URL(string: "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values")!,
+            service: httpService
+        )
+        let e = expectation(description: "web-service-response")
+        repository.getCreditScore { result in
+            switch result {
+                
+            case .success(_):
+                break
+                
+            case .failure(let error):
+                XCTFail("Unexpected error: \(error)")
+            }
+            e.fulfill()
+        }
+        wait(for: [e], timeout: 5.0)
     }
     
     private func makeCreditRepository(httpService: HTTPService) -> WebCreditRepository {
