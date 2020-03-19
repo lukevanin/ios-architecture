@@ -19,10 +19,14 @@ final class JSONWebServiceTests: XCTest {
         #warning("TODO: Test invalid JSON data")
     }
     
-    func testServerError() {
+    func testServer500Error() {
         #warning("TODO: Test server error")
     }
     
+    func testServer400Error() {
+        #warning("TODO: Test server error")
+    }
+
     func testConnectionError() {
         #warning("TODO: Test connection error")
     }

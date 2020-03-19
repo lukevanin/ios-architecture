@@ -10,6 +10,24 @@ import Foundation
 @testable import ClearScore
 
 
+final class MockCreditRepository: CreditRepository {
+    typealias Handler = () -> CreditRepository.CreditScoreResult
+    var handler: Handler
+    var queue: DispatchQueue
+    init(queue: DispatchQueue? = nil, handler: Handler? = nil) {
+        self.handler = handler ?? {
+            return .failure(.init(kind: .unknown, underlyingError: nil))
+        }
+        self.queue = queue ?? DispatchQueue(label: "credit-repository")
+    }
+    func getCreditScore(completion: @escaping CreditRepository.CreditScoreCompletion) {
+        queue.async { [handler] in
+            completion(handler())
+        }
+    }
+}
+
+
 class MockHTTPService: HTTPService {
     typealias Handler = (URLRequest) -> Result<Data, ConnectionError>
     var handler: Handler
